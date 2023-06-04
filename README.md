@@ -1,30 +1,23 @@
 # Beginner Learning Materials on Reverse Engineering Video Games
 
 Here is a compiled list based on personally recommended learning materials to help people with the process of learning how to reverse engineer video games. <br>
-I hope it will help others spend more time learning and less time searching.
+Content focuses on Windows x86.
 
-Majority of the collected resources here will be focused on reversing PC games on the Microsoft Windows operating system with x86 assembly in mind over x64 as it is easier to learn.
-
-Reversing engineering video games is more often than not related to "game hacking", they come and go together so don't be surprised if some of the learning materials come from such sites/sources.
 
 ## Recommended order to learn
 
-1. Learn how to search efficiently on Google, all your answers and resources are found on the internet
-2. Learn using Cheat Engine
-3. Learn about hexadecimal and binary numbering systems, and about computer memory in general
-4. Learn x86 assembly
-5. Learn C++
-6. Learn using IDA/Ghidra
-7. Learn basics of game programming
-8. Learn fundamentals of the Win32 API
-9. Learn the inner workings of Windows operating system, aka Windows internals
-10. Practice, practice, practice...
+1. Learn using Cheat Engine
+2. Learn about hexadecimal and binary numbering systems, and about computer memory in general
+3. Learn x86 assembly
+4. Learn C++
+5. Learn using IDA/Ghidra
+6. Learn basics of game programming
+7. Learn fundamentals of the Win32 API / Windows Internals
+8. Practice, the techniques.
 
 ## Software needed for reversing
 
-It's not recommended to run any of these tools (especially Cheat Engine) while playing multiplayer games that have anti-cheat systems in place, unless you know what you are doing.
-
-For starters get familiar with Cheat Engine, and either IDA or Ghidra.
+Get familiar with Cheat Engine, and either IDA or Ghidra(open source).
 
 - Memory scanners:
     - [Cheat Engine](https://www.cheatengine.org/)
@@ -33,7 +26,7 @@ For starters get familiar with Cheat Engine, and either IDA or Ghidra.
     - [IDA (freeware edition)](https://www.hex-rays.com/products/ida/support/download_freeware/)
     - [Ghidra](https://ghidra-sre.org/)
     - [x64dbg](https://x64dbg.com)
-    - [dnSpy (decompiler, debugger, and editor for C# applications)](https://github.com/dnSpyEx/dnSpy)
+    - [dnSpy (decompiler, debugger, and editor for C# applications)](https://github.com/0xd4d/dnSpy)
 
 - Process Tools:
     - [ProcessHacker (monitor process and system resources)](https://processhacker.sourceforge.io/)
@@ -42,7 +35,7 @@ For starters get familiar with Cheat Engine, and either IDA or Ghidra.
 
 - PE Tools:
     - [Explorer Suite (PE editor)](https://ntcore.com/?page_id=388)
-    - [Detect It Easy (file type and packer identifier)](https://github.com/horsicq/Detect-It-Easy)
+    - [Detect It Easy (file type and packer identifier)](https://ntinfo.biz/index.html)
     - [TrIDNet (file identifier)](https://mark0.net/soft-tridnet-e.html)
 
 - Network Tools:
@@ -51,25 +44,23 @@ For starters get familiar with Cheat Engine, and either IDA or Ghidra.
     - [Fiddler](https://www.telerik.com/fiddler)
 
 - Other:
-    - [HxD editor (basic hex editor)](https://mh-nexus.de/en/hxd/)
-    - [ImHex (advanced hex editor)](https://github.com/WerWolv/ImHex)
     - [ReClass.NET (reverse-engineering data structures in memory)](https://github.com/ReClassNET/ReClass.NET)
-
+    
 ## Picking the right tools
 
 Before getting to work on a game you must know your target, so it's important to gather some information such as:
 - What software technologies it uses
 - What programming language and compiler it had been developed with
-- Does it have any anti-reversing or anti-tamper technology in place
-- Is it running on any popular third-party game engines (Unity, Unreal Engine, Source Engine, etc.)
+- Does it have any anti-reversing technology in place
+- What engine is it running?
 
 Games sharing the same engines often have really similar and recurring codebase that you can use to your advantage. For third-party game engines such as Unreal Engine or Unity there are a lot of custom tools online that can ease the process of reverse engineering.
 
-Games coded in high-level interpreted/intermediate programming languages such as C# or Java are generally much easier to reverse engineer as compared to C/C++, due to the metadata not being lost as they aren't compiled into low-level machine code.
+Games coded with interpreted programming languages such as C# or Java are much easier to reverse engineer as compared to C/C++, due to the metadata not being lost as they aren't compiled into low-level machine code.
 
 For Unity-based games (and for any other games developed with the .Net Framework) use dnSpy instead of IDA/Ghidra.
 
-We are mainly going to focus on reversing games coded in C++ as it is still the gold standard in video game programming.
+Focus on reversing games coded in C++ as it is still the gold standard in video game programming. (Tech Tax, no company can escape the C curse)
 
 - Examples of games made with C++:
     - Counter-Strike
@@ -79,9 +70,7 @@ We are mainly going to focus on reversing games coded in C++ as it is still the 
     - Tom Clancy's Rainbow Six Siege
     - Fallout 4
     - Borderlands
-    - Rocket League
     - Destiny 2
-    - ARK: Survival Evolved
 
 - Examples of games made with C#:
     - Genshin Impact
@@ -92,8 +81,6 @@ We are mainly going to focus on reversing games coded in C++ as it is still the 
     - RimWorld
     - Hollow Knight
     - Cuphead
-    - Getting Over It
-    - Risk of Rain 2
 
 ## Must-read beginner level materials
 
@@ -101,11 +88,11 @@ We are mainly going to focus on reversing games coded in C++ as it is still the 
     - [Game Hacking Academy](https://gamehacking.academy/)
     - [From coding to hacking: An introduction guide to practical (external) game hacking](https://www.unknowncheats.me/forum/programming-for-beginners/267073-coding-hacking-introduction-guide-practical-external-game-hacking.html)
 
-- Guides to x86 assembly:
+- Intros to x86 assembly:
     - [What Is Assembly Language? - javidx9](https://www.youtube.com/watch?v=1FXhjErUz58)
     - [A Crash Course in x86 Assembly for Reverse Engineers - SensePost](https://sensepost.com/blogstatic/2014/01/SensePost_crash_course_in_x86_assembly-.pdf)
 
-- Guides to IDA:
+- Guide to IDA:
     - [IDA Pro Beginner Guide](https://guidedhacking.com/threads/ida-pro-beginner-guide.8006/)
 
 - Basic game programming concepts:
@@ -114,10 +101,10 @@ We are mainly going to focus on reversing games coded in C++ as it is still the 
 
 - Books:
     - Reversing and game hacking:
-        - [Game Hacking: Developing Autonomous Bots for Online Games - Nick Cano](https://www.amazon.com/Game-Hacking-Developing-Autonomous-Online-ebook/dp/B01J4NKSRI)
+        - [Game Hacking: Developing Autonomous Bots for Online Games - Nick Cano](https://www.amazon.com/Game-Hacking-Developing-Autonomous-Online-ebook/dp/B01J4NKSRI) Apparently stolen free information
         - [Practical Malware Analysis: The Hands-On Guide to Dissecting Malicious Software - Michael Sikorski and Andrew Honig](https://www.amazon.com/Practical-Malware-Analysis-Hands-Dissecting/dp/1593272901)
     - Game programming:
-	    - [Tricks of the Windows Game Programming Gurus, Second Edition (2002) - Andre Lamothe](https://www.amazon.com/Tricks-Windows-Game-Programming-Gurus-dp-0672323699/dp/0672323699)
+	    - [Tricks of the Windows Game Programming Gurus, Second Edition (2002) - Andre Lamothe](https://www.amazon.com/Tricks-Windows-Game-Programming-Gurus-dp-0672323699/dp/0672323699) (OUTDATED, 2002, DIRECTDRAW)
 	    - [Game Coding Complete, Fourth Edition (2012) - Mike McShaffry](https://www.amazon.com/Game-Coding-Complete-Fourth-McShaffry/dp/1133776574)
 
 - Google:
@@ -127,7 +114,6 @@ We are mainly going to focus on reversing games coded in C++ as it is still the 
 
 ## Must-watch youtube channels
 
-- [Guided Hacking YouTube channel for reverse engineering and game hacking tutorials](https://www.youtube.com/c/GuidedHacking/videos)
 - [Stephen Chapman's YouTube channel for Cheat Engine tutorials](https://www.youtube.com/c/StephenChapman/videos)
 
 ## Other really useful materials
@@ -188,7 +174,7 @@ We are mainly going to focus on reversing games coded in C++ as it is still the 
     - [The Ultimate Online Game Hacking Resource](https://github.com/dsasmblr/hacking-online-games)
     - [A Study Path for Game Programmer](https://miloyip.github.io/game-programmer/game-programmer.pdf)
 
-- Guided Hacking resources (As of 2023 it is now paywalled content):
+- Guided Hacking resources (As of 2023 it is now paywalled content): ALL GUIDED HACKING CONTENT IS RIPPED FROM PUBLICALLY AVAILABLE INFO, COUNTERSTRIKE IS EASY TO HACK AND HAS BEEN FOR YEARS
     - [GHB1 - Start Here Beginner Guide to Game Hacking](https://guidedhacking.com/threads/start-here-beginners-guide-to-learning-game-hacking.5911/)
     - [GHB2 - Beginners Guide To Reverse Engineering](https://guidedhacking.com/threads/beginners-guide-to-reverse-engineering-tutorial.13446/)
     - [GHB3 - Intermediate Guide to Game Hacking](https://guidedhacking.com/threads/ghb3-intermediate-guide-to-game-hacking.13495/)
@@ -205,25 +191,11 @@ We are mainly going to focus on reversing games coded in C++ as it is still the 
 
 - Memory scanning
 - Memory editing
-- Memory patching
-- Pattern scanning
-- x86 assembly
-- x64 assembly
 - Process debugging
-- Disassembling code
-- Decompiling code
-- Function hooking
 - API hooking
-- Detouring functions
 - Dll injection
-- Internal cheats
-- External cheats
 - Threads
 - Windows PE format
 - Win32 API
 - Windows internals
-- Anti-debugging
-- Anti-reversing
-- Anti-tamper
-- Software packers
 - Software unpacking
