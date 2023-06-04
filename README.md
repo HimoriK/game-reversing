@@ -1,13 +1,13 @@
-# Beginner Learning Materials on Reverse Engineering Video Games
+## Beginner Learning Materials on Reverse Engineering Video Games
 
-Here is a compiled list based on personally recommended learning materials to help people with the process of learning how to reverse engineer video games. <br>
+A compiled list based on personally recommended learning materials to reverse engineer video games. <br>
 Content focuses on Windows x86.
 
 
 ## Recommended order to learn
 
 1. Learn using Cheat Engine
-2. Learn about hexadecimal and binary numbering systems, and about computer memory in general
+2. Learn hexadecimal, binary, & CPU memory
 3. Learn x86 assembly
 4. Learn C++
 5. Learn using IDA/Ghidra
@@ -17,7 +17,7 @@ Content focuses on Windows x86.
 
 ## Software needed for reversing
 
-Get familiar with Cheat Engine, and either IDA or Ghidra(open source).
+Cheat Engine, and either IDA or Ghidra(open source).
 
 - Memory scanners:
     - [Cheat Engine](https://www.cheatengine.org/)
@@ -54,30 +54,26 @@ Before getting to work on a game you must know your target, so it's important to
 - Does it have any anti-reversing technology in place
 - What engine is it running?
 
-Games sharing the same engines often have really similar and recurring codebase that you can use to your advantage. For third-party game engines such as Unreal Engine or Unity there are a lot of custom tools online that can ease the process of reverse engineering.
+Similiar engines often use the same tools. For 3rd game engines such as Unreal Engine or Unity there are a lot of custom tools online that can ease the process of reverse engineering.
 
 Games coded with interpreted programming languages such as C# or Java are much easier to reverse engineer as compared to C/C++, due to the metadata not being lost as they aren't compiled into low-level machine code.
 
 For Unity-based games (and for any other games developed with the .Net Framework) use dnSpy instead of IDA/Ghidra.
 
-Focus on reversing games coded in C++ as it is still the gold standard in video game programming. (Tech Tax, no company can escape the C curse)
+Focus on reversing games coded in C++ as it's still the gold standard. (Tech Tax, no company can escape the C curse)
 
 - Examples of games made with C++:
     - Counter-Strike
     - Grand Theft Auto V
     - Fortnite
     - World of Warcraft
-    - Tom Clancy's Rainbow Six Siege
     - Fallout 4
-    - Borderlands
     - Destiny 2
 
 - Examples of games made with C#:
     - Genshin Impact
     - Beat Saber
     - Rust
-    - Hearthstone
-    - Subnautica
     - RimWorld
     - Hollow Knight
     - Cuphead
@@ -92,25 +88,11 @@ Focus on reversing games coded in C++ as it is still the gold standard in video 
     - [What Is Assembly Language? - javidx9](https://www.youtube.com/watch?v=1FXhjErUz58)
     - [A Crash Course in x86 Assembly for Reverse Engineers - SensePost](https://sensepost.com/blogstatic/2014/01/SensePost_crash_course_in_x86_assembly-.pdf)
 
-- Guide to IDA:
-    - [IDA Pro Beginner Guide](https://guidedhacking.com/threads/ida-pro-beginner-guide.8006/)
-
 - Basic game programming concepts:
     - [Game Programming Algorithms and Techniques - Sanjay Madhav](https://www.informit.com/articles/article.aspx?p=2167437&seqNum=2) (This article has 7 pages in total, read up to page 5-6)
-    - [Understanding the Game Main Loop - Rodrigo Monteiro](http://higherorderfun.com/blog/2010/08/17/understanding-the-game-main-loop/)
 
 - Books:
-    - Reversing and game hacking:
-        - [Game Hacking: Developing Autonomous Bots for Online Games - Nick Cano](https://www.amazon.com/Game-Hacking-Developing-Autonomous-Online-ebook/dp/B01J4NKSRI) Apparently stolen free information
-        - [Practical Malware Analysis: The Hands-On Guide to Dissecting Malicious Software - Michael Sikorski and Andrew Honig](https://www.amazon.com/Practical-Malware-Analysis-Hands-Dissecting/dp/1593272901)
-    - Game programming:
-	    - [Tricks of the Windows Game Programming Gurus, Second Edition (2002) - Andre Lamothe](https://www.amazon.com/Tricks-Windows-Game-Programming-Gurus-dp-0672323699/dp/0672323699) (OUTDATED, 2002, DIRECTDRAW)
-	    - [Game Coding Complete, Fourth Edition (2012) - Mike McShaffry](https://www.amazon.com/Game-Coding-Complete-Fourth-McShaffry/dp/1133776574)
-
-- Google:
-    - [How to Search the Internet Effectively - WebTools Company](https://www.casey.org/media/CLS_ResourceGuides_subdocs_SearchInternetEffectively.pdf)
-    - [GOOGLE CHEAT SHEET](https://web.archive.org/web/20220122205807/https://library.cbtsc.ca/wp-content/uploads/2019/10/GOOGLE-CHEAT-SHEET.pdf)
-    - [The Ultimate Google Search Operators Cheatsheet - Helvis Smoteks](https://blog.linkody.com/guides/google-search-operators-cheatsheet)
+    - [Practical Malware Analysis: The Hands-On Guide to Dissecting Malicious Software - Michael Sikorski and Andrew Honig](https://www.amazon.com/Practical-Malware-Analysis-Hands-Dissecting/dp/1593272901)   
 
 ## Must-watch youtube channels
 
@@ -129,9 +111,6 @@ Focus on reversing games coded in C++ as it is still the gold standard in video 
     - [9 Best Reverse Engineering Tools for 2021](https://www.apriorit.com/dev-blog/366-software-reverse-engineering-tools)
     - [Steamless](https://github.com/atom0s/Steamless)
     - [RenderDoc](https://github.com/baldurk/renderdoc)
-    - [NirSoft Programmer Tools](https://www.nirsoft.net/programmer_tools.html)
-    - [NirSoft Network Tools](https://www.nirsoft.net/network_tools.html)
-    - [NirSoft System Tools](https://www.nirsoft.net/system_tools.html)
 
 - Practical reverse engineering and game hacking materials:
     - [Reverse Engineering/Game Patching Tutorial: Full Res Roller Coaster Tycoon with Ghidra+x64dbg+Python](https://www.youtube.com/watch?v=cwBoUuy4nGc)
@@ -154,36 +133,24 @@ Focus on reversing games coded in C++ as it is still the gold standard in video 
 - Books and papers:
     - Reversing and game hacking:
         - [Practical Video Game Bots: Automating Game Processes using C++, Python, and AutoIt - Ilya Shpigor](https://www.amazon.com/Practical-Video-Game-Bots-Automating/dp/1484237358)
-        - [Reversing: Secrets of Reverse Engineering - Eldad Eilam](https://www.amazon.com/Reversing-Secrets-Engineering-Eldad-Eilam/dp/0764574817)
         - [X86 Disassembly - Wikibooks.org](https://upload.wikimedia.org/wikipedia/commons/5/53/X86_Disassembly.pdf)
         - [Learning Malware Analysis: Explore the concepts, tools, and techniques to analyze and investigate Windows malware - Monnappa K A](https://www.amazon.com/Learning-Malware-Analysis-techniques-investigate/dp/1788392507)
     - Game programming:
-        - [Game Programming Algorithms and Techniques: A Platform-Agnostic Approach - Sanjay Madhav](https://www.amazon.com/Game-Programming-Algorithms-Techniques-Platform-Agnostic/dp/0321940156)
-        - [Game Programming Patterns - Robert Nystrom](https://gameprogrammingpatterns.com/contents.html)
+        - [Game Programming Patterns - Robert Nystrom](https://gameprogrammingpatterns.com/contents.html) below average book and outdated
     - Windows and Win32 API programming:
-        - [Programming Windows: The Definitive Guide To The Win32 Api - Charles Petzold](https://www.amazon.com/Programming-Windows-Definitive-Guide-Win32/dp/9350041057)
-        - [Windows Kernel Programming - Pavel Yosifovich](https://www.amazon.com/Windows-Kernel-Programming-Pavel-Yosifovich/dp/1977593372)
-        - [Windows Internals - Pavel Yosifovich, Alex Ionescu, Mark E. Russinovich, David A. Solomon](https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189)
+        - [Programming Windows: The Definitive Guide To The Win32 Api - Charles Petzold](https://www.amazon.com/Programming-Windows-Definitive-Guide-Win32/dp/9350041057) This literally teaches Windows98 API DELETE
+        - [Windows Kernel Programming - Pavel Yosifovich](https://www.amazon.com/Windows-Kernel-Programming-Pavel-Yosifovich/dp/1977593372) (Effective book, not many on this subject)
+        - [Windows Internals - Pavel Yosifovich, Alex Ionescu, Mark E. Russinovich, David A. Solomon](https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189) 
     - Bypassing anti-debugging, anti-reversing, and anti-tamper techniques:
         - [The Ultimate Anti-Reversing Reference - Peter Ferrie](https://anti-reversing.com/Downloads/Anti-Reversing/The_Ultimate_Anti-Reversing_Reference.pdf)
-        - [The Art of Unpacking - Mark Vincent Yason](https://www.blackhat.com/presentations/bh-usa-07/Yason/Whitepaper/bh-usa-07-yason-WP.pdf)
 
 - Curated lists of tools, tutorials, resources, and much more for reverse engineering video games:
     - [UnKnoWnCheaTs Game Hacking Wiki](https://www.unknowncheats.me/wiki/UnKnoWnCheaTs_Game_Hacking_Wiki)
-    - [The Ultimate Game Hacking Resource](https://github.com/dsasmblr/game-hacking)
     - [The Ultimate Online Game Hacking Resource](https://github.com/dsasmblr/hacking-online-games)
     - [A Study Path for Game Programmer](https://miloyip.github.io/game-programmer/game-programmer.pdf)
 
-- Guided Hacking resources (As of 2023 it is now paywalled content): ALL GUIDED HACKING CONTENT IS RIPPED FROM PUBLICALLY AVAILABLE INFO, COUNTERSTRIKE IS EASY TO HACK AND HAS BEEN FOR YEARS
-    - [GHB1 - Start Here Beginner Guide to Game Hacking](https://guidedhacking.com/threads/start-here-beginners-guide-to-learning-game-hacking.5911/)
-    - [GHB2 - Beginners Guide To Reverse Engineering](https://guidedhacking.com/threads/beginners-guide-to-reverse-engineering-tutorial.13446/)
-    - [GHB3 - Intermediate Guide to Game Hacking](https://guidedhacking.com/threads/ghb3-intermediate-guide-to-game-hacking.13495/)
-    - [How to make an MMO Bot - MMORPG Bot Automation](https://guidedhacking.com/threads/how-to-make-an-mmo-bot-mmorpg-bot-automation.15173/)
-    - [Internal vs. External Hacks - What's the difference?](https://guidedhacking.com/threads/internal-vs-external-hacks-whats-the-difference.8808/)
-
 ## Useful sites along the way
 
-- [Google](https://www.google.com) (seriously, use it, a lot, all the time)
 - [Official Microsoft documentation](https://docs.microsoft.com/en-us/) (includes documentations on MSVC, DirectX, Win32 API, etc.)
 - [Godbolt](https://godbolt.org/) (Extremely useful to verify compiler generated C++ code)
 
